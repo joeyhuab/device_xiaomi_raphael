@@ -172,6 +172,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
     $(LOCAL_PATH)/configs/component-overrides_qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/component-overrides.xml
 
+# Configstore
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.1-service
+
 # Display
 TARGET_BOARD_PLATFORM := msmnile
 
@@ -188,9 +192,6 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libvulkan \
     vendor.qti.hardware.display.allocator@4.0.vendor
-
-PRODUCT_PACKAGES += \
-    disable_configstore
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.protected_contents=false
